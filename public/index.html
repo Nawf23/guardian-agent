@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guardian Agent — deterministic pre-trade risk controls for AI-powered trading." />
+    <title>Guardian Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">G</span><span>Guardian</span></a>
+      <div class="status-cluster"><span class="live-dot"></span><span>Risk engine online</span><span class="mode" id="mode">DEMO</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">THE CONTROL LAYER FOR AGENTIC FINANCE</div>
+        <h1>Trade with an agent.<br /><span>Keep human-grade control.</span></h1>
+        <p>Guardian turns trading intent into enforceable policy, simulates the downside, and blocks unsafe execution before funds move.</p>
+        <div class="trust-row"><span>Deterministic checks</span><span>Human approval</span><span>Audit receipts</span></div>
+      </section>
+
+      <section class="workspace">
+        <aside class="scenario-panel">
+          <div class="panel-heading"><span>Demo scenarios</span><span class="step">01</span></div>
+          <div id="scenario-list" class="scenario-list"></div>
+          <div class="mandate-card">
+            <div class="mandate-icon">◇</div>
+            <div><strong>Active mandate</strong><p>Max 1% risk · 35% concentration · volatility circuit breaker</p></div>
+          </div>
+        </aside>
+
+        <section class="decision-panel">
+          <div class="panel-heading"><span>Agent decision</span><span class="step">02</span></div>
+          <div id="empty-state" class="empty-state">
+            <div class="orb"><div></div></div>
+            <h2>Choose a scenario</h2><p>Guardian will inspect the proposed trade against your active risk mandate.</p>
+          </div>
+          <div id="result" class="result hidden">
+            <div class="intent-card">
+              <div><span class="label">YOUR INTENT</span><p id="intent"></p></div>
+              <div class="order-chip"><strong id="order-symbol"></strong><span id="order-details"></span><small id="market-source"></small></div>
+            </div>
+            <div class="decision-header">
+              <div id="decision-icon" class="decision-icon"></div>
+              <div><span class="label">GUARDIAN DECISION</span><h2 id="decision-title"></h2><p id="explanation"></p></div>
+            </div>
+            <div id="checks" class="checks"></div>
+            <div id="alternative" class="alternative hidden"></div>
+            <button id="execute" class="execute hidden">Approve simulated execution <span>→</span></button>
+            <div id="receipt" class="receipt hidden"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer><span>Built for Binance Agent OS Mini Hackathon</span><span>Every decision is inspectable. Every action is bounded.</span></footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
