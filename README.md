@@ -6,7 +6,28 @@ Guardian is a deterministic pre-trade risk layer for agentic finance. It turns n
 
 Built as a Track A prototype for the Binance Agent OS Mini Hackathon. Guardian reads live Binance Spot market data for price, spread, liquidity, and short-horizon volatility while keeping execution in a safe simulated mode.
 
-## Run locally
+## Try Guardian now
+
+### [Open the live Guardian Agent →](http://5.180.151.120:4173)
+
+No installation, account, wallet, or API key is required. The public prototype uses live Binance Spot market data and simulated order execution, so visitors can safely explore every decision path without risking funds.
+
+## How to use the agent
+
+1. Open the [live application](http://5.180.151.120:4173).
+2. Read the active mandate shown on the left: maximum portfolio risk, concentration, spread, volatility, and minimum liquidity coverage.
+3. Select **Disciplined BNB entry** to evaluate a safe order using live Binance market data.
+4. Review all five policy checks, then choose **Approve simulated execution** to generate a single-use audit receipt.
+5. Select **Concentrated high-risk order** to see Guardian reject an unsafe proposal and calculate a safer maximum position size.
+6. Select **Volatility circuit breaker** to see execution pause when market conditions breach the mandate.
+
+### What the labels mean
+
+- **Binance Spot API · live** — the decision used current Binance price, spread, liquidity, and candle data.
+- **Guardian stress-test fixture** — a reproducible adverse-market simulation used to demonstrate the circuit breaker.
+- **Demo / dry run** — orders and receipts are simulated; no real funds move.
+
+## Run locally for development
 
 Requires Node.js 20 or later. There are no third-party runtime dependencies.
 
@@ -14,7 +35,7 @@ Requires Node.js 20 or later. There are no third-party runtime dependencies.
 npm start
 ```
 
-Open <http://localhost:4173> and run the three demo scenarios.
+Open <http://localhost:4173>. This address is only for developers running their own copy; normal visitors should use the [public application](http://5.180.151.120:4173).
 
 ```bash
 npm test
