@@ -41,6 +41,12 @@ Open <http://localhost:4173>. This address is only for developers running their 
 npm test
 ```
 
+## Deploy on Vercel
+
+The repository includes Vercel serverless functions and routing. Import this GitHub repository into Vercel with the **Other** framework preset and keep the repository root as the root directory. Every push to `main` will then update production automatically.
+
+For a public demo, no environment variables are required. For stronger approval-token isolation, set a long random `APPROVAL_SECRET` in Vercel's Production environment. This secret never grants Binance access and must not be committed to Git.
+
 ## Safety model
 
 - The risk decision is deterministic; an LLM cannot override it.
